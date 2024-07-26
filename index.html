@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdullah's Free Games</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 0;
+            color: #4CAF50;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        .games-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .games-list li {
+            background-color: #4CAF50;
+            color: #fff;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+        .games-list li:hover {
+            background-color: #45a049;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 0.8em;
+            color: #777;
+        }
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Abdullah's Free Games</h1>
+        <p>Explore a collection of awesome free games curated just for you!</p>
+        <ul class="games-list">
+            <li onclick="openGame('game1.html')">Game 1: Exciting Adventure</li>
+            <li onclick="openGame('game2.html')">Game 2: Puzzle Paradise</li>
+            <li onclick="openGame('game3.html')">Game 3: Racing Rush</li>
+            <li onclick="openGame('game4.html')">Game 4: Strategy Showdown</li>
+        </ul>
+        <iframe id="gameFrame" src="" style="display:none;"></iframe>
+        <footer>&copy; 2024 Abdullah's Free Games. All rights reserved.</footer>
+    </div>
+
+    <script>
+        function openGame(gameUrl) {
+            document.getElementById('gameFrame').style.display = 'block';
+            document.getElementById('gameFrame').src = gameUrl;
+        }
+    </script>
+</body>
+</html>
